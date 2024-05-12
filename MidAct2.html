@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Color Mixer Calculator</title>
+    <link rel="stylesheet" type="text/css" href="a2ex.css">
+    <script type="text/javascript">
+        var num1 = 0;
+        var num2 = 0;
+        var sum;
+
+        function addBy(){
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            sum = document.getElementById("result").value = parseInt(num1) + parseInt(num2);
+        }
+        function colorRange(){
+            if (sum > 0 && sum < 255){
+                document.getElementById("color").innerHTML = "Red"
+            }
+            else if (sum > 256 && sum < 512){
+                document.getElementById("color").innerHTML = "Green"
+            }
+            else if (sum > 513 && sum < 1028){
+                document.getElementById("color").innerHTML = "Blue"
+            }
+            else {
+                document.getElementById("color").innerHTML = "N/A"
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>My Color Mixer Calculator</h2>
+    <form>
+        <p>First Number: <input type="text" id="firstNumber" /></p>
+        <p>Second Number: <input type="text" id="secondNumber" /></p>
+        <input type="button" onClick="addBy()" value="Add" id="btnAdd"/>
+
+        <p>The Sum is: <input type="text" id="result" readonly/>
+        <input type="button" value="Roll" id="btnRoll" onClick="colorRange()" /></p>
+        <p id="color"></p>
+    </form>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <a href="Activities.html" target="_self"><input type="button" value="Back"/></a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body{
+    border: 1px solid black;
+    height: 250px;
+    width: 400px;
+    text-align: center;
+    margin-left: 450px;
+    margin-top: 80px;
+}
+#result{
+    width: 100px;
+}
+#btnAdd{
+    background-color: aqua;
+}
+#btnRoll{
+    background-color: burlywood;
+}
